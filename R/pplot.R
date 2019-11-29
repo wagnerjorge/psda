@@ -7,9 +7,9 @@
 #' @param color A string that describes the color of center.
 #' @examples 
 #' x <- psim(10, 10) #simulate 10 polygons of 10 sides
-#' pplot(x, center = T, color = 'red')
+#' pplot(x, center = TRUE, color = 'red')
 #' @export
-pplot <- function(polygon, center = F, color = 'black'){
+pplot <- function(polygon, center = FALSE, color = 'black'){
   polygon <- lapply(polygon, function(x) {colnames(x) <- NULL; x})
   g <- ggplot2::ggplot()
   names(polygon) = 1:length(polygon)
@@ -20,9 +20,11 @@ pplot <- function(polygon, center = F, color = 'black'){
   g <- g + ggplot2::xlab('Dimension 1') + ggplot2::ylab('Dimension 2')
   
   if(center){
-    pol_center <- data.frame(.id = 1 : length(polygon),  t(sapply(polygon, pmean_id)))
-    names(pol_center) <- names(k)
-    g <- g + geom_point(data = pol_center, aes(x = X1, y = X2, group = .id), color = color)
+    pc <- data.frame(.id = 1 : length(polygon),  t(sapply(polygon, pmean_id)))
+    names(pc) <- names(k)
+    g <- g + ggplot2::geom_point(data = pc, 
+                                 ggplot2::aes(x = pc$X1, y = pc$X2, group = pc$.id), 
+                        color = color)
   }
   return(g)
 }

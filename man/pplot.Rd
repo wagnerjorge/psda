@@ -4,7 +4,7 @@
 \alias{pplot}
 \title{Plot polygonal symbolic variable}
 \usage{
-pplot(polygon, center = F, color = "black")
+pplot(polygon, center = FALSE, color = "black")
 }
 \arguments{
 \item{polygon}{A list of matrices with dimension l x 2 where l represents vertices number of polygon.}
@@ -18,5 +18,5 @@ Prints all overlaid polygons in the display. The polygons obtained through class
 }
 \examples{
 x <- psim(10, 10) #simulate 10 polygons of 10 sides
-pplot(x, center = T, color = 'red')
+pplot(x, center = TRUE, color = 'red')
 }

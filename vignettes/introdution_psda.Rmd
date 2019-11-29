@@ -1,15 +1,37 @@
 ---
-title: "introduction-psda"
-author: "Wagner Silva, Renata Souza and Francisco Cysneiros"
-date: Octuber 23, 2019
-output: github_document
+title: "introdution-psda"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introdution-psda}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(psda)
+```
+---
+title: "Introduction to psda"
+author: "Wagner Silva, Renata Souza and Francisco Cysneiros"
+date: "November 28, 2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
 
 This vignette document is a brief tutorial for psda 1.3.2. Descriptive, auxiliary a modeling functions are presented and applied an example.
 
 Data Science is fundamental to handle and extract knowledge about the data. Silva et al. [1] presented the Symbolic Polygonal Data Analysis as an approach to this task. The psda package is a toolbox to transform number in knowledge. We highlight some important characteristics of the package:
-  
-  * It constructs symbolic polygonal data from classical data;
+
+* It constructs symbolic polygonal data from classical data;
 * It calculates symbolic polygonal descriptive measures;
 * It models symbolic polygonal data through a symbolic polygonal linear regression model.
 
@@ -50,8 +72,8 @@ head(polygonal_variables$team_pts, 3)
 # Descriptive Measures
 
 After to obtain the symbolic polygonal data we can start to extract knowledge of this type of data through polygonal descriptive measure. Some of this measures are bi-dimensionals, because indicate the relation with the dimensions of the polygons [1]. In this vignette we present the mean, variance, covariance and correlation as can be seen below:
-  
-  ```{r descriptivel}
+
+```{r descriptivel}
 ## symbolic polygonal mean
 pmean(polygonal_variables$team_pts)
 pmean(polygonal_variables$opp_pts)
@@ -74,7 +96,7 @@ The construction of symbolic polygonal scatterplot is done through [ggplot2](htt
 # Visualization
 ```{r scatter}
 pplot(polygonal_variables$team_pts) + labs(x = 'Dimension 1', y = 'Dimension 2') +
-  theme_bw()
+theme_bw()
 ```
 
 # Modeling
@@ -106,7 +128,7 @@ fitted_polygons <- fitted(fit, polygon = T, vertices = v)
 head(fitted_polygons, 3)
 
 pplot(fitted_polygons) + labs(x = 'Dimension 1', y = 'Dimension 2') +
-  theme_bw()
+theme_bw()
 ```
 
 Silva et al.[1] proposed a performance measure to evaluate the fit of model from root mean squared error for area, named rmsea. We can calculate from function `rmsea` as follow below.

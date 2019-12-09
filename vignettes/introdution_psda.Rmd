@@ -91,7 +91,7 @@ pcorr(polygonal_variables$team_pts)
 pcorr(polygonal_variables$opp_pts) 
 ```
 
-The construction of symbolic polygonal scatterplot is done through [ggplot2](https://CRAN.R-project.org/package=ggplot2) package, including all modification. From `pplot` we use a symbolic polygonal variable to plot the scatterplot. The graphic is a powerful tool to understand the data, for example, in this case, we can observe a pentagon with a radius greater than all. This can indicate outliers.
+The construction of symbolic polygonal scatterplot is done through [ggplot2](https://CRAN.R-project.org/package=ggplot2) package, including all modification. From `pplot` we use a symbolic polygonal variable to plot the scatterplot. The graphic is a powerful tool to understand the data, for example, in this case, we can observe a pentagon with a radius greater than all. This can indicate outliers. 
 
 # Visualization
 ```{r scatter}

@@ -1,4 +1,7 @@
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/psda)](https://CRAN.R-project.org/package=psda)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/psda)](https://cran.r-project.org/package=psda)
+
+
 <img width="150" alt="portfolio_view" src="https://user-images.githubusercontent.com/8506543/69838885-249ba180-1234-11ea-928e-69cb7277b215.jpg" align = "right">
 
 # Overview - Polygonal Symbolic Data Analysis (PSDA)

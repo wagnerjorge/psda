@@ -1,6 +1,6 @@
 Package: psda
 Title: Polygonal Symbolic Data Analysis
-Version: 1.3.3
+Version: 1.4.0
 Date: 2019-11-28
 Authors@R: c(person("Wagner", "Silva", email = "wjfs@cin.ufpe.br", role = c("aut", "cre", "ths")),
            person("Renata", "Souza", email = "rmcrs@cin.ufpe.br", role = c("aut")),

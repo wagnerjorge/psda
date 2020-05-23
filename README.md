@@ -6,7 +6,7 @@
 
 # Overview - Polygonal Symbolic Data Analysis (PSDA)
 
-This vignette document is a brief tutorial for psda 1.3.3. Descriptive, auxiliary modeling functions are presented and applied in an example.
+This vignette document is a brief tutorial for psda 1.4.0. Descriptive, auxiliary modeling functions are presented and applied in an example.
 
 Data Science is fundamental to handle and extract knowledge about the data. Silva et al. [1] presented the Symbolic Polygonal Data Analysis as an approach to this task. The psda package is a toolbox to transform classical data into knowledge. We highlight some important characteristics of the package:
   

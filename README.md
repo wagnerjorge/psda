@@ -8,11 +8,19 @@
 
 This vignette document is a brief tutorial for psda 1.4.0. Descriptive, auxiliary modeling functions are presented and applied in an example.
 
-Data Science is fundamental to handle and extract knowledge about the data. Silva et al. [1] presented the Symbolic Polygonal Data Analysis as an approach to this task. The psda package is a toolbox to transform classical data into knowledge. We highlight some important characteristics of the package:
+Data Science is field of study in Computer Science responsable to extract knowledge about the data. For this, it uses basically, statistical and computational inteligente methods transforming data in insights. Actually, many datasets are generated every day with diverse sizes from social media, ubiquitous computing, and so on. Cleary, these data need analysis considering modern tools built from theoretical support. Silva et al. [1] developed a new type of variables able to:
+
+* Summarize extensive dataset building without great information loss;
+* Capacity of preserve the variability of the data after agregation or fusion step;
+* Build a way to protect personal data after the polygonal transformation.
+
+This type of variable was named as polygonal data and is studied from Symbolic Polygonal Data Analysis. Besides, the authors developed a R package known as psda. It is a toolbox to transform classical data into knowledge. We highlight some important characteristics of the package:
   
 * It constructs symbolic polygonal data from classical data;
 * It calculates symbolic polygonal descriptive measures;
 * It models symbolic polygonal data through a symbolic polygonal linear regression model.
+
+The next steps shows a application of the psda library (details can be seen in [1]). In addition, other application and package discussion can be found in [2].
 
 ## WNBA 2014 Data
 Women's national basketball American (WNBA) dataset is used to demonstrate the functionality of the package. It has classical data with dimension 4022 by 6.
@@ -116,4 +124,5 @@ rmsea(fitted_polygons, polygonal_variables$team_pts)
 ```
 
 ## References
-[1] Silva, W.J.F., Souza, R.M.C.R., Cysneiros, F.J.A. Polygonal data analysis: A new framework in symbolic data analysis, Knowledge Based Systems, 163 (2019). 26-35, <https://www.sciencedirect.com/science/article/pii/S0950705118304052>.
+[1] Silva, W.J.F., Souza, R.M.C.R., Cysneiros, F.J.A. Polygonal data analysis: A new framework in symbolic data analysis. Knowledge Based Systems, 163 (2019). 26-35, <https://www.sciencedirect.com/science/article/pii/S0950705118304052>.
+[2] Silva, W.J.F., Souza, R.M.C.R. & Cysneiros, F.J.A. psda: A tool for extracting knowledge from symbolic data with an application in Brazilian educational data. Soft Computing (2020). <https://doi.org/10.1007/s00500-020-05252-5>
